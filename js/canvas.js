@@ -116,14 +116,10 @@ devicePixelRatio = devicePixelRatio / backingStoreRatio;
 
 var height = window.innerHeight;
 var width = window.innerWidth;
-canvas.width = width * devicePixelRatio;
-canvas.height = height * devicePixelRatio;
-canvas.style.height = height + "px";
-canvas.style.width = width + "px";
+canvas.width = height;
+canvas.height = width;
 
-canvasContext.scale(window.devicePixelRatio, window.devicePixelRatio)
-
-var canvasCenter = {
+canvasCenter = {
     x: width / 2,
     y: height / 2
 };
@@ -539,12 +535,8 @@ function clearCanvasGridCel(x, y){
 function updateCanvasAttributes(){
     var height = window.innerHeight;
     var width = window.innerWidth;
-    canvas.width = width * devicePixelRatio;
-    canvas.height = height * devicePixelRatio;
-    canvas.style.height = height + "px";
-    canvas.style.width = width + "px";
-    
-    canvasContext.scale(window.devicePixelRatio, window.devicePixelRatio)
+    canvas.width = height;
+    canvas.height = width;
     
     canvasCenter = {
         x: width / 2,
